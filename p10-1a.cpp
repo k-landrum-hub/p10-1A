@@ -1,19 +1,35 @@
-// probe.cpp - what does an array hold, and what is past the end?
- 
-#include <iostream>
+/*
+* 4 digit arrays
+* korbin landrum
+* gets an array of 10 with 4 random digits
+*/
+
+#include<iostream>
+
 using namespace std;
-int main(void) {
-	int values[5];
-	cout << "Before assigning anything:" << endl;
-	for (int i = 0; i < 5; i++) {
-		cout << "values[" << i << "] = " << values[i] << endl;
+
+
+int generateRandNumbers(int numbers[], int size);
+
+int main() {
+	srand(time(NULL));
+	int SIZE = 10;
+	int numbers[10];
+
+	generateRandNumbers(numbers, SIZE);
+	
+	cout << "The random intagers: ";
+	for (int i = 0; i < SIZE; i++) {
+		cout << " " << numbers[i];
 	}
-	for (int i = 0; i < 5; i++) {
-		values[i] = (i + 1) * 10;
+	cout << endl;
+}
+
+int generateRandNumbers(int numbers[], int size) {
+
+	for (int i = 0; i < size; i++) {
+		numbers[i] =  (rand() % 8999)+1000;
 	}
-	cout << "After assigning 10, 20, 30, 40, 50:" << endl;
-	for (int i = 0; i <= 7; i++) {
-		cout << "values[" << i << "] = " << values[i] << endl;
-	}
-	return 0;
+
+	return numbers[size];
 }
