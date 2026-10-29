@@ -23,19 +23,23 @@ int main() {
 		cout << " " << numbers[i];
 	}
 	//Even indacies
-	for (int i = 0; i < SIZE; i++) {
-		if (i % 2 == 0) {
+	cout << endl << "Even Indacies: ";
+	for (int i = 1; i < SIZE; i += 2) {
 			cout << " " << numbers[i];
-		}
 	}
 	//even values
-	cout << "Even Numbers: ";
+	cout << endl << "Even Numbers: ";
 	for (int i = 0; i < SIZE; i++) {
 		if (numbers[i] % 2 == 0) {
 			cout << " " << numbers[i];
 		}
 		}
-	//
+	// show the elements in reverse order
+	cout << endl << "Reverse order: ";
+	for (int i = SIZE - 1; i >= 0; i--) {
+	
+			cout << " " << numbers[i];
+	}
 	cout << endl;
 }
 
