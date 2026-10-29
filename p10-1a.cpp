@@ -40,6 +40,8 @@ int main() {
 	
 			cout << " " << numbers[i];
 	}
+	// shows just the first and last element
+	cout << endl << "First and Last: " << numbers[0] << " " << numbers[SIZE - 1];
 	cout << endl;
 }
 
