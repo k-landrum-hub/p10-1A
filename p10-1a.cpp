@@ -28,7 +28,13 @@ int main() {
 			cout << " " << numbers[i];
 		}
 	}
-	
+	//even values
+	cout << "Even Numbers: ";
+	for (int i = 0; i < SIZE; i++) {
+		if (numbers[i] % 2 == 0) {
+			cout << " " << numbers[i];
+		}
+		}
 	//
 	cout << endl;
 }
