@@ -17,11 +17,19 @@ int main() {
 	int numbers[10];
 
 	generateRandNumbers(numbers, SIZE);
-	
+	//random intagers
 	cout << "The random intagers: ";
 	for (int i = 0; i < SIZE; i++) {
 		cout << " " << numbers[i];
 	}
+	//Even indacies
+	for (int i = 0; i < SIZE; i++) {
+		if (i % 2 == 0) {
+			cout << " " << numbers[i];
+		}
+	}
+	
+	//
 	cout << endl;
 }
 
@@ -33,3 +41,4 @@ int generateRandNumbers(int numbers[], int size) {
 
 	return numbers[size];
 }
+
